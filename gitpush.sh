@@ -1,7 +1,6 @@
 #!/usr/bin/bash
-echo $1
-if [ -z $1 ];then
-    echo "必须输入commit信息!!!!"
+if [ -z "$1" ]; then
+    echo '必须输入commit信息!!!!';
     exit 0
 fi
 git pull
