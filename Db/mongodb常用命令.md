@@ -38,3 +38,25 @@ sudo service mongod stop
 sudo apt-get purge mongodb-org*
 sudo rm -r /var/log/mongodb
 sudo rm -r /var/lib/mongodb
+
+4. mongo授权
+```
+db.createUser(
+	{
+		user: "test",
+		pwd: "test",
+		roles: [ { role: "dbAdmin", db: "databasename" } ]
+	}
+)
+```
+
+db.createUser(
+	{
+		user: "zly",
+		pwd: "zly",
+		roles: [ { role: "dbAdmin", db: "zlydata" } ]
+	}
+)
+
+5. 查找
+db.collection.find( { qty: { $gt: 20 } } )

@@ -42,3 +42,8 @@ passwd username
 -- 需要是root用户,如果是修改root,不需要username
 ```
 
+# 6. 后台启动
+
+```bash
+nohup command  >xx_std.out 2>&1 &
+```
